@@ -2,11 +2,9 @@ class Dog
   attr_accessor :name
   @@all = []
   def initialize(name)
-   @@all << self
    @name = name
-    
+   save
   end
-  
   def self.all
     @@all 
   end
@@ -19,9 +17,9 @@ class Dog
     @@all.each do |dog|
       puts dog.name 
     end
+  end
   
   def save
     @@all << self 
   end
-end
 end
